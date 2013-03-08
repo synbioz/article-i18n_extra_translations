@@ -1,12 +1,12 @@
 require 'i18n'
 require 'i18n/exceptions'
 
-dirname = File.dirname(__FILE__)
+DIRNAME = File.dirname(__FILE__)
 
 module I18n
   class ExtraTranslations
-    autoload :Store, "#{dirname}/extra_translations/store.rb"
-    autoload :SimpleExtension, "#{dirname}/extra_translations/simple_extension.rb"
+    autoload :Store, "#{DIRNAME}/extra_translations/store.rb"
+    autoload :SimpleExtension, "#{DIRNAME}/extra_translations/simple_extension.rb"
 
     class << self
       # An ExtraTranslations::Store will be availaible everywhere
