@@ -5,7 +5,7 @@ module I18n
       def miss(l, k, o) ; add_key(l, k, o, :missing) end
 
       def used?(keys)
-        keys.inject(self){ |h, k| h.kind_of?(Hash) ? h[k] : (break h[k]) } == :used
+        keys.inject(self){ |h, k| h.kind_of?(Hash) ? h[k] : (break h[k]) } == :used rescue false
       end
 
       protected
